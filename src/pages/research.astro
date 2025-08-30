@@ -5,17 +5,37 @@ import HorizontalCardPublication from "../components/HorizontalCardPublication.a
 ---
 
 <BaseLayout title = "Research" sideBarActiveItemID="research">
-  <div>
+  <!-- <div>
     <div class="text-3xl w-full font-bold mb-5">Backdoor Attacks</div>
-  </div>
+  </div> -->
 
   <HorizontalCardPublication
     badge="Preprint"
-    title="Towards Clean-Label Backdoor Attacks in the Physical World"
-    authors={["Thinh Dao", "Cuong Chi Le", "Khoa D Doan", "Kok-Seng Wong"]}
+    title="Clean-Label Physical Backdoor Attacks with Data Distillation"
+    authors={["Thinh Dao", "Khoa D Doan", "Kok-Seng Wong"]}
     author_index={0}
     img="/images/research/nips24.png"
-    abstract="Deep Neural Networks (DNNs) are vulnerable to backdoor poisoning attacks, with most research focusing on digital triggers, special patterns digitally added to test-time inputs to induce targeted misclassification. In contrast, physical triggers, which are natural objects within a physical scene, have emerged as a desirable alternative since they enable real-time backdoor activations without digital manipulation. However, current physical attacks require that poisoned inputs have incorrect labels, making them easily detectable upon human inspection. In this paper, we collect a facial dataset of 21,238 images with 7 common accessories as triggers and use it to study the threat of clean-label backdoor attacks in the physical world. Our study reveals two findings. First, the success of physical attacks depends on the poisoning algorithm, physical trigger, and the pair of source-target classes. Second, although clean-label poisoned samples preserve ground-truth labels, their perceptual quality could be seriously degraded due to conspicuous artifacts in the images. Such samples are also vulnerable to statistical filtering methods because they deviate from the distribution of clean samples in the feature space. To address these issues, we propose replacing the standard ℓ∞ regularization with a novel pixel regularization and feature regularization that could enhance the imperceptibility of poisoned samples without compromising attack performance. Our study highlights accidental backdoor activations as a key limitation of clean-label physical backdoor attacks. This happens when unintended objects or classes accidentally cause the model to misclassify as the target class."
+    abstract="Deep Neural Networks (DNNs) are shown to be vulnerable to backdoor poisoning attacks, with most research focusing on digital triggers -- artificial patterns added to test-time inputs to induce targeted misclassification. Physical triggers, which are natural objects embedded in real-world scenes, offer a promising alternative for attackers, as they can activate backdoors in real-time without digital manipulation. However, existing physical backdoor attacks are dirty-label, meaning that attackers must change the labels of poisoned inputs to the target label. The inconsistency between image content and label exposes the attack to human inspection, reducing its stealthiness in real-world settings. To address this limitation, we introduce Clean-Label Physical Backdoor Attack (CLPBA), a new paradigm of physical backdoor attack that does not require label manipulation and trigger injection at the training stage. Instead, the attacker injects imperceptible perturbations into a small number of target class samples to backdoor a model. By framing the attack as a Dataset Distillation problem, we develop three CLPBA variants -- Parameter Matching, Gradient Matching, and Feature Matching -- that craft effective poisons under both linear probing and full-finetuning training settings. In hard scenarios that require backdoor generalizability in the physical world, CLPBA is shown to even surpass Dirty-label attack baselines. We demonstrate the effectiveness of CLPBA via extensive experiments on two collected physical backdoor datasets for facial recognition and animal classification."
     url="https://arxiv.org/abs/2407.19203"
+  />
+
+  <HorizontalCardPublication
+    badge="Preprint"
+    title="BackFed: An Efficient & Standardized Benchmark Suite for Backdoor Attacks in Federated Learning"
+    authors={["Thinh Dao", "Dung Thuy Nguyen", "Khoa D Doan", "Kok-Seng Wong"]}
+    author_index={0}
+    img="/images/research/backfed.png"
+    abstract="Federated Learning (FL) systems are vulnerable to backdoor attacks, where adversaries train their local models on poisoned data and submit poisoned model updates to compromise the global model. Despite numerous proposed attacks and defenses, divergent experimental settings, implementation errors, and unrealistic assumptions hinder fair comparisons and valid conclusions about their effectiveness in real-world scenarios. To address this, we introduce BackFed - a comprehensive benchmark suite designed to standardize, streamline, and reliably evaluate backdoor attacks and defenses in FL, with a focus on practical constraints. Our benchmark offers key advantages through its multi-processing implementation that significantly accelerates experimentation and the modular design that enables seamless integration of new methods via well-defined APIs. With a standardized evaluation pipeline, we envision BackFed as a plug-and-play environment for researchers to comprehensively and reliably evaluate new attacks and defenses. Using BackFed, we conduct large-scale studies of representative backdoor attacks and defenses across both Computer Vision and Natural Language Processing tasks with diverse model architectures and experimental settings. Our experiments critically assess the performance of proposed attacks and defenses, revealing unknown limitations and modes of failures under practical conditions. These empirical insights provide valuable guidance for the development of new methods and for enhancing the security of FL systems."
+    url="https://arxiv.org/abs/2507.04903"
+  />
+
+  <HorizontalCardPublication
+    badge="Preprint"
+    title="MetaLLM: A High-performant and Cost-efficient Dynamic Framework for Wrapping LLMs"
+    authors={["Quang H. Nguyen", "Thinh Dao", "Duy C. Hoang", "Juliette Decugis", "Saurav Manchanda", "Nitesh V. Chawla", "Khoa D. Doan"]}
+    author_index={1}
+    img="/images/research/meta_llm.png"
+    abstract="Federated Learning (FL) systems are vulnerable to backdoor attacks, where adversaries train their local models on poisoned data and submit poisoned model updates to compromise the global model. Despite numerous proposed attacks and defenses, divergent experimental settings, implementation errors, and unrealistic assumptions hinder fair comparisons and valid conclusions about their effectiveness in real-world scenarios. To address this, we introduce BackFed - a comprehensive benchmark suite designed to standardize, streamline, and reliably evaluate backdoor attacks and defenses in FL, with a focus on practical constraints. Our benchmark offers key advantages through its multi-processing implementation that significantly accelerates experimentation and the modular design that enables seamless integration of new methods via well-defined APIs. With a standardized evaluation pipeline, we envision BackFed as a plug-and-play environment for researchers to comprehensively and reliably evaluate new attacks and defenses. Using BackFed, we conduct large-scale studies of representative backdoor attacks and defenses across both Computer Vision and Natural Language Processing tasks with diverse model architectures and experimental settings. Our experiments critically assess the performance of proposed attacks and defenses, revealing unknown limitations and modes of failures under practical conditions. These empirical insights provide valuable guidance for the development of new methods and for enhancing the security of FL systems."
+    url="https://arxiv.org/abs/2407.10834"
   />
 </BaseLayout>

@@ -9,21 +9,34 @@ import TimeLineList from "../components/cv/TimeLineList.astro";
     <div class="text-3xl w-full font-bold">Thinh D. Dao</div>
   </div>
 
+  <div class="mb-5">
+    <a 
+      href="/cv.pdf" 
+      download="Thinh_Dao_CV.pdf"
+      class="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200"
+    >
+      <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+      </svg>
+      Download CV (PDF)
+    </a>
+  </div>
+
   <div class="mb-10 text-justify">
-    I am a 3rd year CS student at VinUni. I am fortunate to work as a research assistant at  <a class="link" target="_blank" href="https://sail-research.com/">VinUni Security and Artificial Intelligence Lab</a> for the past 2 years, under the supervision of Prof. Kok-Seng Wong and Prof. Khoa D. Doan. My research lies in the intersection of Adversarial Machine Learning,
+    I am a 4th year CS student at VinUni. I am fortunate to work as a research assistant at  <a class="link" target="_blank" href="https://sail-research.com/">VinUni Security and Artificial Intelligence Lab</a> for the past 2 years, under the supervision of Prof. Kok-Seng Wong and Prof. Khoa D. Doan. My research lies in the intersection of Adversarial Machine Learning,
     Federated Learning (FL) and Explainable AI (XAI). In addition to my research, I am also passionate about learning Reinforcement Learning (RL) and Large Language Models (LLMs). I find the intersection of LLMs and RL particularly fascinating, especially in building intelligent systems that can learn to improve their responses based on feedback from the environment.
   </div>
 
-  <div class="mb-5">
+  <!-- <div class="mb-5">
     <div class="text-3xl w-full font-bold">Education</div>
-  </div>
+  </div> -->
 
-  <div class="time-line-container grid gap-4 mb-10">
+  <!-- <div class="time-line-container grid gap-4 mb-10">
     <TimeLineElement
       title="B.S. in Computer Science"
-      subtitle="2021 - 2024 @ VinUni, Ha Noi, Vietnam"
+      subtitle="2021 - 2025 @ VinUni, Ha Noi, Vietnam"
     >
-      GPA: 3.54 / 4.0
+      GPA: 3.68 / 4.0
     </TimeLineElement>
     <TimeLineElement
       title="Tran Phu High School for the Gifted"
@@ -104,7 +117,7 @@ import TimeLineList from "../components/cv/TimeLineList.astro";
     <li>
       <b> National Third Prize (Vietnam Science and Engineering Fair, 2018).</b> 
     </li>
-  </ul>
+  </ul> -->
   
   
 </BaseLayout>
